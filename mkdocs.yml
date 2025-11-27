@@ -1,0 +1,96 @@
+site_name: Bradford 2025 data pipelines
+site_url: https://bradford-2025.github.io/data
+
+theme:
+  name: material
+  palette:
+    primary: black
+  font:
+    text: Denim INK
+  logo: assets/logo.svg
+
+docs_dir: upstream/docs
+
+extra_css:
+  - assets/fonts/denim-ink.css
+
+plugins:
+  - search
+  - mermaid2
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_root_heading: true
+            # parameter_headings: true
+            show_signature: true
+            separate_signature: false
+            inherited_members: true
+            show_symbol_type_toc: true
+          paths:
+          #   - ./
+            - upstream/pipelines
+            - upstream/scripts
+  - mkdocs-jupyter:
+      include: ["*.ipynb"] # Default: ["*.py", "*.ipynb"]
+
+nav:
+  - Introduction: index.md
+  - overview.md
+
+  - Open data:
+    - Publishing: process/publishing.md
+
+  - Pipelines:
+      - Overview: pipelines.md
+      - Operational Systems:
+        - Airtable:
+          - pipelines/programme.ipynb
+          - pipelines/cultural-learning.ipynb
+          - pipelines/digital-followers.ipynb
+          - pipelines/sustainability.ipynb
+        - Spektrix:
+          - pipelines/ticketing.ipynb
+        - Spreadsheets:
+          - pipelines/survey.ipynb
+          - pipelines/manual_data_feeds.ipynb
+          - pipelines/digital-events.ipynb
+        - Rosterfy:
+          - pipelines/volunteer-people.ipynb
+          - pipelines/volunteer-shift.ipynb
+        - Google Analytics:
+          - pipelines/digital-audience.ipynb
+      
+      - Aggregation:
+        - pipelines/combine.ipynb
+
+      - Utilities:
+        - pipelines/status.ipynb
+        - pipelines/lookup-airtable-to-spektrix.ipynb
+
+      - Reports:
+        - pipelines/reports/ticketing.ipynb
+        - pipelines/reports/volunteer-postcode.ipynb
+  - Reference:
+    - Overview: reference.md
+    - reference/processing.md
+    - reference/utilities.md
+    - reference/scripts.md
+  # - tutorials.md
+
+  - How-to guides: how-to-guides.md
+
+
+repo_url: https://github.com/bradford-2025/open-data-pipelines/
+
+markdown_extensions:
+  - pymdownx.superfences:
+      # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+
+hooks:
+  - upstream/hooks/copy_pipeline_files.py
+
