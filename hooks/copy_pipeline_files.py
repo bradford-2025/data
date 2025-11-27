@@ -3,10 +3,11 @@ from shutil import copyfile
 from pathlib import Path
 from filecmp import cmp
 
+UPSTREAM = 'upstream/'
 
 remote_files = [
-    'pipelines/*.ipynb',
-    'pipelines/reports/*.ipynb',
+    f'{UPSTREAM}pipelines/*.ipynb',
+    f'{UPSTREAM}pipelines/reports/*.ipynb',
 ]
 
 
@@ -17,7 +18,8 @@ def on_pre_build(config):
     for pattern in remote_files:
         files = iglob(pattern, recursive=True)
         for src in files:
-            dest = dest_dir / src
+            print(src)
+            dest = dest_dir / src.replace(UPSTREAM, '')
 
             # Don't copy if the file is the same
             if dest.exists() and cmp(src, dest):
