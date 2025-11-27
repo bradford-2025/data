@@ -30,6 +30,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: bradford-2025/open-data-pipelines
+          ssh-key: ${{ secrets.PIPELINES_DEPLOY_KEY }}
           path: pipeline-data
 
       # Runs a single command using the runners shell
