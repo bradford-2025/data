@@ -9,8 +9,6 @@ theme:
     text: Denim INK
   logo: assets/logo.svg
 
-docs_dir: upstream/docs
-
 extra_css:
   - assets/fonts/denim-ink.css
 
@@ -33,6 +31,8 @@ plugins:
             - upstream/scripts
   - mkdocs-jupyter:
       include: ["*.ipynb"] # Default: ["*.py", "*.ipynb"]
+watch:
+  - upstream
 
 nav:
   - Introduction: index.md
@@ -92,5 +92,5 @@ markdown_extensions:
           format: !!python/name:mermaid2.fence_mermaid_custom
 
 hooks:
-  - upstream/hooks/copy_pipeline_files.py
+  - hooks/copy_pipeline_files.py
 
