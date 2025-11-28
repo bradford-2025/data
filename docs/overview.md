@@ -70,39 +70,9 @@ Stages are orchestrated by `dvc`, which determines the correct order
 to execute the stages. The following is a view of the dependencies between stages.
 
 ```mermaid
-flowchart LR
-        node1["pipelines/dvc.yaml:combine"]
-        node2["pipelines/dvc.yaml:cultural-learning"]
-        node3["pipelines/dvc.yaml:date"]
-        node4["pipelines/dvc.yaml:digital-audience"]
-        node5["pipelines/dvc.yaml:digital-followers"]
-        node6["pipelines/dvc.yaml:lookups-airtable-to-spektrix"]
-        node7["pipelines/dvc.yaml:manual-events"]
-        node8["pipelines/dvc.yaml:programme"]
-        node9["pipelines/dvc.yaml:status"]
-        node10["pipelines/dvc.yaml:sustainability"]
-        node11["pipelines/dvc.yaml:ticketing"]
-        node12["pipelines/dvc.yaml:volunteer-people"]
-        node13["pipelines/dvc.yaml:volunteer-shift"]
-        node14["pipelines/dvc.yaml:youth-skills"]
-        node3-->node2
-        node3-->node4
-        node3-->node5
-        node3-->node7
-        node3-->node8
-        node3-->node9
-        node3-->node10
-        node3-->node11
-        node3-->node12
-        node3-->node13
-        node3-->node14
-        node4-->node1
-        node7-->node1
-        node7-->node8
-        node8-->node1
-        node8-->node6
-        node11-->node6
-        node15["pipelines/dvc.yaml:manual-spektrix"]
+{%
+    include "../upstream/dag-stages.mermaid"
+%}
 
         classDef yellow fill:#e0b942;
         classDef green fill:#45d108;
