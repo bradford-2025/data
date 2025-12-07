@@ -33,14 +33,15 @@ plugins:
   - mkdocs-jupyter:
       include: ["*.ipynb"] # Default: ["*.py", "*.ipynb"]
   - include-markdown
-watch:
-  - upstream
+# watch:
+#   - upstream
 
 nav:
   - Introduction: index.md
   - overview.md
 
-  - Open data:
+  - Data:
+    - Datasets: datasets/index.md
     - Publishing: process/publishing.md
 
   - Pipelines:
