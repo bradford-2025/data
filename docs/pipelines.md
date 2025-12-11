@@ -30,16 +30,17 @@ Google Analytics:
 
 * [Digital audience](pipelines/digital-audience.ipynb)
 
-## Aggregation
+## Preparation and Publishing
 
 * [Combine programme data](pipelines/combine.ipynb)
+* [Open Data Publishing pipelines](pipelines/combine.ipynb)  
+    Create publishable version of the data.
+    The planned [open data schema](datasets/index.md) will be published with the evaluation report.
 
 ## Utilities
 
-* [Match Airtable to Spektrix](pipelines/lookup-airtable-to-spektrix.ipynb)
-* [Status](pipelines/status.ipynb) &mdash; check status of remote files
+* [Status](pipelines/status.ipynb)  
+    Check status of remote files
+* [Catalogue](pipelines/catalogue.ipynb)  
+    Download and store schema of source systems &mdash; useful for troubleshooting
 
-## Reports (not scheduled)
-
-* [Ticketing report](pipelines/reports/ticketing.ipynb)
-* [Volunteering postcode report](pipelines/reports/volunteer-postcode.ipynb)

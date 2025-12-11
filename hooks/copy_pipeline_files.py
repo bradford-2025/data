@@ -7,12 +7,12 @@ UPSTREAM = 'upstream/pipelines/'
 dest_dir = Path('docs/pipelines')
 
 remote_files = [
+    'catalogue.ipynb',
     'combine.ipynb',
     'cultural-learning.ipynb',
     'digital-audience.ipynb',
     'digital-events.ipynb',
     'digital-followers.ipynb',
-    'lookup-airtable-to-spektrix.ipynb',
     'manual_data_feeds.ipynb',
     'programme.ipynb',
     'publish.ipynb',

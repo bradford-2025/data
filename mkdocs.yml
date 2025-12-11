@@ -64,12 +64,14 @@ nav:
         - Google Analytics:
           - pipelines/digital-audience.ipynb
       
-      - Aggregation:
+      - Preparation and Publication:
         - pipelines/combine.ipynb
+        - pipelines/publish.ipynb
 
       - Utilities:
         - pipelines/status.ipynb
-        - pipelines/lookup-airtable-to-spektrix.ipynb
+        - pipelines/catalogue.ipynb
+        - pipelines/reports.ipynb
 
       # - Reports:
       #   - pipelines/reports/ticketing.ipynb
