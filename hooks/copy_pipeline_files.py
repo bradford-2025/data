@@ -18,7 +18,7 @@ remote_files = [
     'publish.ipynb',
     'reports.ipynb',
     'status.ipynb',
-    'survey.ipynb',
+    'audience-survey.ipynb',
     'sustainability.ipynb',
     'ticketing.ipynb',
     'volunteer-people.ipynb',

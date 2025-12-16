@@ -17,9 +17,8 @@ Spektrix:
 
 Spreadsheets / manual:
 
-* [Survey](pipelines/survey.ipynb)
+* [Audience Survey](pipelines/audience-survey.ipynb)
 * [Manual data](pipelines/manual_data_feeds.ipynb)
-* [Digital events](pipelines/digital-events.ipynb)
 
 Rosterfy:
 
@@ -29,6 +28,7 @@ Rosterfy:
 Google Analytics:
 
 * [Digital audience](pipelines/digital-audience.ipynb)
+* [Digital events](pipelines/digital-events.ipynb)
 
 ## Preparation and Publishing
 

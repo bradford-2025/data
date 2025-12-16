@@ -1,12 +1,8 @@
 Libraries used across all pipelines.
 
-::: utils.metadata
-
-::: utils.paths
-
+::: utils.filters
 ::: utils.helpers
-::: utils.lookup
 ::: utils.mappers
-::: utils.processing
-::: utils.techniques
+::: utils.metadata
+::: utils.paths
 ::: utils.volunteers

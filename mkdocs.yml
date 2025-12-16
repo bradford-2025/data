@@ -21,6 +21,9 @@ plugins:
         python:
           options:
             show_root_heading: true
+            show_root_toc_entry: true
+            show_root_full_path: true
+            show_submodules: true
             # parameter_headings: true
             show_signature: true
             separate_signature: false
@@ -55,13 +58,13 @@ nav:
         - Spektrix:
           - pipelines/ticketing.ipynb
         - Spreadsheets:
-          - pipelines/survey.ipynb
+          - pipelines/audience-survey.ipynb
           - pipelines/manual_data_feeds.ipynb
-          - pipelines/digital-events.ipynb
         - Rosterfy:
           - pipelines/volunteer-people.ipynb
           - pipelines/volunteer-shift.ipynb
         - Google Analytics:
+          - pipelines/digital-events.ipynb
           - pipelines/digital-audience.ipynb
       
       - Preparation and Publication:
@@ -80,7 +83,6 @@ nav:
     - Overview: reference.md
     - reference/processing.md
     - reference/utilities.md
-    - reference/scripts.md
   # - tutorials.md
 
   - How-to guides: how-to-guides.md
