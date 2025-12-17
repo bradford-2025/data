@@ -91,7 +91,7 @@ nav:
       - Overview: architecture/overview.md
 
 
-repo_url: https://github.com/bradford-2025/open-data-pipelines/
+repo_url: https://github.com/bradford-2025/data/
 
 markdown_extensions:
   - pymdownx.superfences:
