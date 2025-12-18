@@ -42,9 +42,10 @@ graph LR
 The pipelines extract data from the following operational systems
 
 * **Airtable**
-    * Programme data (_projects_, _schedule_ and _venues_)
+    * Programme data (_projects_, _schedule_ and _venues_), covering **events**, **audience** and **participants**
     * Sustainability data (_carbon impact_ per project)
 * **Google Analytics**
+    * Digital events
     * Website traffic
 * **Rosterfy**
     * Volunteers
@@ -56,25 +57,10 @@ The pipelines extract data from the following operational systems
 
 There are also pipelines which
 
-* match data across systems (e.g. Airtable and Spektrix events)
-* combine event data from multiple systems.
+* combine event data from multiple systems,
+* make publishable versions of the data,
+* report on the data extracted from the operational systems.
 
-The pipelines run overnight at 03:25 UTC (3:25 AM GMT / 4:25 AM BST).
+The pipelines run each night at 03:25 UTC (3:25 AM GMT / 4:25 AM BST).
 
-## Pipeline stages
-
-Pipeline stages are defined in Jupyter notebooks, allowing code and documentation to be mixed.
-[Pipeline documentation](pipelines.md) can be found elsewhere in this documentation site.
-
-Stages are orchestrated by `dvc`, which determines the correct order
-to execute the stages. The following is a view of the dependencies between stages.
-
-```mermaid
-{%
-    include "../upstream/dag-stages.mermaid"
-%}
-
-        classDef yellow fill:#e0b942;
-        classDef green fill:#45d108;
-        classDef pink,default fill:#f4accd;
-```
+The [pipelines overview page](pipelines.md) provides more insight into how the pipelines work.

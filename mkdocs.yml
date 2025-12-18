@@ -44,8 +44,9 @@ nav:
   - overview.md
 
   - Data:
+    - datasets/overview.md
     - Datasets: datasets/index.md
-    - Publishing: process/publishing.md
+    # - Publishing: process/publishing.md
 
   - Pipelines:
       - Overview: pipelines.md
