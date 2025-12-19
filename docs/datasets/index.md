@@ -1,6 +1,14 @@
-# Datasets
+# Open Data
 
-The Bradford 2025 City of Culture datasets are grouped as follows:
+## Licensing
+
+Bradford 2025 City of Culture data is released under a 
+[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+
+## Datasets
+
+The Bradford 2025 City of Culture datasets are detailed below.
 
 ## Programme
 
@@ -97,18 +105,14 @@ The data is collected by the following dimensions
 | ---------------------- | :--: | -------------------------------------------------------------------------- |
 | Month                  |  M   | Month the event being covered was held in                                  |
 | Bradford ward          |  W   | Bradford Ward of residence the survey respondent                           |
-| Bradford postcode area |  A   | Bradford postcode area (i.e. first part of postcode) the survey respondent |
-| Local authority        |  L   | UK local authority of residence of the survey respondent                   |
 
 The following aggregations are provided in the data
 
-| Aggregation               | Code        |              File               |    M    |    W    |    A    |    L    |
-| ------------------------- | ----------- | :-----------------------------: | :-----: | :-----: | :-----: | :-----: |
-| Total                     | TOTAL       | {{ dataset_link('survey/total.csv') }}  |         |         |         |         |
-| By month                  | BY_MONTH    | {{ dataset_link('survey/total.csv') }}  | &check; |         |         |         |
-| By Bradford Ward          | BY_WARD     | {{ dataset_link('survey/by_geo.csv') }} |         | &check; |         |         |
-| By Bradford postcode area | BY_POSTCODE | {{ dataset_link('survey/by_geo.csv') }} |         |         | &check; |         |
-| By Local Authority        | BY_LA       | {{ dataset_link('survey/by_geo.csv') }} |         |         |         | &check; |
+| Aggregation               | Code        |              File               |    M    |    W    |
+| ------------------------- | ----------- | :-----------------------------: | :-----: | :-----: |
+| Total                     | TOTAL       | {{ dataset_link('survey/total.csv') }}  |         |         |
+| By month                  | BY_MONTH    | {{ dataset_link('survey/total.csv') }}  | &check; |         |
+| By Bradford Ward          | BY_WARD     | {{ dataset_link('survey/by_geo.csv') }} |         | &check; |
 
 ## Ticketing
 
