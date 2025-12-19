@@ -1,0 +1,49 @@
+name: Publish data
+
+# Controls when the workflow will run
+"on":
+  # Trigger on repository dispatch
+  repository_dispatch:
+    types:
+      - publish_data
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "publish"
+  cancel-in-progress: false
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Check out this repo
+        uses: actions/checkout@v6
+
+      - name: Check out the pipelines repo
+        uses: actions/checkout@v6
+        with:
+          repository: bradford-2025/open-data-pipelines
+          ssh-key: ${{ secrets.PIPELINES_DEPLOY_KEY }}
+          path: upstream
+
+      - name: Setup Python
+        uses: ./.github/actions/setup-python-environment
+
+      - name: Build site
+        run: uv run scripts/publish-data.py
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: Publish open data
+          file_pattern: docs/datasets
