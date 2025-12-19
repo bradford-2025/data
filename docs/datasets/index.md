@@ -22,16 +22,16 @@ Data is available by the following dimensions
 
 The following aggregations are published.
 
-| Aggregation                    | Code                     | Published? |    T    |    C    |    P    |    M    |
-| ------------------------------ | ------------------------ | :--------: | :-----: | :-----: | :-----: | :-----: |
-| Total                          | TOTAL                    |            |         |         |         |         |
-| By event type                  | BY_EVENT_TYPE            |            | &check; |         |         |         |
-| By evaluation category         | BY_EVAL_CAT              |            |         | &check; |         |         |
-| Monthly total                  | BY_MONTH                 |            |         |         |         | &check; |
-| Monthly by event type          | BY_MONTH_BY_EVENT_TYPE   |            | &check; |         |         | &check; |
-| Monthly by evaluation category | BY_MONTH_BY_EVAL_CAT     |            |         | &check; |         | &check; |
-| By project                     | BY_PROJECT               |            |         |         | &check; |         |
-| By project by event type       | BY_PROJECT_BY_EVENT_TYPE |            | &check; |         | &check; |         |
+| Aggregation                    | Code                     |                    File                     |    T    |  C  |    P    |    M    |
+| ------------------------------ | ------------------------ | :-----------------------------------------: | :-----: | :-: | :-----: | :-----: |
+| Total                          | TOTAL                    |   {{ dataset_link('programme/total.csv') }}    |         |     |         |         |
+| By event type                  | BY_EVENT_TYPE            |   {{ dataset_link('programme/total.csv') }}    | &check; |     |         |         |
+| By evaluation category         | BY_EVAL_CAT              |   {{ dataset_link('programme/total.csv') }}    |         |  &check;  |         |         |
+| Monthly total                  | BY_MONTH                 |  {{ dataset_link('programme/by_month.csv') }}  |         |     |         | &check; |
+| Monthly by event type          | BY_MONTH_BY_EVENT_TYPE   |  {{ dataset_link('programme/by_month.csv') }}  | &check; |     |         | &check; |
+| Monthly by evaluation category | BY_MONTH_BY_EVAL_CAT     |  {{ dataset_link('programme/by_month.csv') }}  |         |  &check;  |         | &check; |
+| By project                     | BY_PROJECT               | {{ dataset_link('programme/by_project.csv') }} |         |     | &check; |         |
+| By project by event type       | BY_PROJECT_BY_EVENT_TYPE | {{ dataset_link('programme/by_project.csv') }} | &check; |     | &check; |         |
 
 ## Participants
 
@@ -62,13 +62,13 @@ The variable group is used in this case to refine the variable.
 
 The following aggregations are published.
 
-| Aggregation                 | Code                         | Published? |    G    |    P    |    M    |
-| --------------------------- | ---------------------------- | :--------: | :-----: | :-----: | :-----: |
-| Total                       | TOTAL                        |            |         |         |         |
-| By participant type         | BY_PARTICIPANT_TYPE          |            | &check; |         |         |
-| Monthly total               | BY_MONTH                     |            |         |         | &check; |
-| Monthly by participant type | BY_MONTH_BY_PARTICIPANT_TYPE |            | &check; |         | &check; |
-| By project                  | BY_PROJECT                   |            |         | &check; |         |
+| Aggregation                 | Code                         |                   File                   |    G    |    P    |    M    |
+| --------------------------- | ---------------------------- | :--------------------------------------: | :-----: | :-----: | :-----: |
+| Total                       | TOTAL                        |   {{ dataset_link('participant/total.csv') }}    |         |         |         |
+| By participant type         | BY_PARTICIPANT_TYPE          |   {{ dataset_link('participant/total.csv') }}    | &check; |         |         |
+| Monthly total               | BY_MONTH                     |  {{ dataset_link('participant/by_month.csv') }}  |         |         | &check; |
+| Monthly by participant type | BY_MONTH_BY_PARTICIPANT_TYPE |  {{ dataset_link('participant/by_month.csv') }}  | &check; |         | &check; |
+| By project                  | BY_PROJECT                   | {{ dataset_link('participant/by_project.csv') }} |         | &check; |         |
 
 ## Audience survey
 
@@ -102,13 +102,13 @@ The data is collected by the following dimensions
 
 The following aggregations are provided in the data
 
-| Aggregation               | Code        | Published? |    M    |    W    |    A    |    L    |
-| ------------------------- | ----------- | :--------: | :-----: | :-----: | :-----: | :-----: |
-| Total                     | TOTAL       |            |         |         |         |         |
-| By month                  | BY_MONTH    |            | &check; |         |         |         |
-| By Bradford Ward          | BY_WARD     |            |         | &check; |         |         |
-| By Bradford postcode area | BY_POSTCODE |            |         |         | &check; |         |
-| By Local Authority        | BY_LA       |            |         |         |         | &check; |
+| Aggregation               | Code        |              File               |    M    |    W    |    A    |    L    |
+| ------------------------- | ----------- | :-----------------------------: | :-----: | :-----: | :-----: | :-----: |
+| Total                     | TOTAL       | {{ dataset_link('survey/total.csv') }}  |         |         |         |         |
+| By month                  | BY_MONTH    | {{ dataset_link('survey/total.csv') }}  | &check; |         |         |         |
+| By Bradford Ward          | BY_WARD     | {{ dataset_link('survey/by_geo.csv') }} |         | &check; |         |         |
+| By Bradford postcode area | BY_POSTCODE | {{ dataset_link('survey/by_geo.csv') }} |         |         | &check; |         |
+| By Local Authority        | BY_LA       | {{ dataset_link('survey/by_geo.csv') }} |         |         |         | &check; |
 
 ## Ticketing
 
@@ -138,14 +138,14 @@ The data is collected by the following dimensions
 
 The following aggregations are provided in the data
 
-| Aggregation              | Code     | Published? |    M    |    K    |    W    |    A    |    L    |
-| ------------------------ | -------- | :--------: | :-----: | :-----: | :-----: | :-----: | :-----: |
-| Total                    | TOTAL    |            |         |         |         |         |         |
-| By month                 | BY_MONTH |            | &check; |         |         |         |         |
-| By ticket type           | BY_TYPE  |            |         | &check; |         |         |         |
-| By Braford Ward          | BY_WARD  |            |         |         | &check; |         |         |
-| By Braford postcode area | BY_AREA  |            |         |         |         | &check; |         |
-| By Local Authority       | BY_LA    |            |         |         |         |         | &check; |
+| Aggregation              | Code     |                File                |    M    |    K    |    W    |    A    |    L    |
+| ------------------------ | -------- | :--------------------------------: | :-----: | :-----: | :-----: | :-----: | :-----: |
+| Total                    | TOTAL    |  {{ dataset_link('tickets/total.csv') }}   |         |         |         |         |         |
+| By ticket type           | BY_TYPE  |  {{ dataset_link('tickets/total.csv') }}   |         | &check; |         |         |         |
+| By month                 | BY_MONTH | {{ dataset_link('tickets/by_month.csv') }} | &check; |         |         |         |         |
+| By Braford Ward          | BY_WARD  |  {{ dataset_link('tickets/by_geo.csv') }}  |         |         | &check; |         |         |
+| By Braford postcode area | BY_AREA  |  {{ dataset_link('tickets/by_geo.csv') }}  |         |         |         | &check; |         |
+| By Local Authority       | BY_LA    |  {{ dataset_link('tickets/by_geo.csv') }}  |         |         |         |         | &check; |
 
 ## Digital engagement
 
